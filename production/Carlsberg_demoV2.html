@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DataTables | Gentelella</title>
+
+<link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+<link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+<link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+<link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+<link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+<link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+<link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Sales Assistant</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Daniel Xu</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Off-Trade <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.html">Guangzhou</a></li>
+                      <li><a href="index2.html">Chengdu</a></li>
+                      <li><a href="index3.html">Chongqing</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> On-Trade <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="form.html">Guangzhou</a></li>
+                      <li><a href="form_advanced.html">Chengdu</a></li>
+                      <li><a href="form_validation.html">Chongqing</a></li>
+                      <li><a href="form_wizards.html">Beijing</a></li>
+                      <li><a href="form_upload.html">Shanghai</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">Daniel Xu
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+         	<!-- input part -->
+              <div class="col-md-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Target Merchant Info</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <div class="col-md-2">
+                      <p>Second Channel</p>
+                        <div class="col-md-10 col-sm-12 col-xs-12">
+                          <select class="form-control">
+                            <option>Entertainment</option>
+                            <option>Dining</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                      <p>Third Channel</p>
+                        <div class="col-md-10 col-sm-12 col-xs-12">
+                          <select class="form-control">
+                            <optgroup label="Entertainment">
+                              <option value="CA">KTV</option>
+                              <option value="NV">的士高/慢摇吧</option>
+                              <option value="OR">普通酒吧/餐吧</option>
+                              <option value="WA">普通夜总会</option>
+                              <option value="WA">中高档酒吧/餐吧</option>
+                              <option value="WA">中高档外国餐饮</option>
+                              <option value="WA">中高档夜总会</option>
+                              <option value="WA">中高档中式餐饮</option>
+                            </optgroup>
+                            <optgroup label="Dining">
+                              <option value="AK">普通餐饮</option>
+                              <option value="HI">中高档酒吧/餐吧</option>
+                              <option value="HI">中高档外国餐饮</option>
+                              <option value="HI">中高档中式餐饮</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                      <p>Month</p>
+                      <div class="col-md-10 col-sm-12 col-xs-12">
+                          <select class="form-control">
+                            <optgroup label="Summer">
+                              <option value="AK">Mar</option>
+                              <option value="HI">Apr</option>
+                              <option value="HI">May</option>
+                              <option value="HI">Jun</option>
+                              <option value="HI">Jul</option>
+                            </optgroup>
+                            <optgroup label="Winter">
+                              <option value="CA">Aug</option>
+                              <option value="NV">Sep</option>
+                              <option value="OR">Oct</option>
+                              <option value="WA">Nov</option>
+                              <option value="WA">Dec</option>
+                              <option value="WA">Jan</option>
+                              <option value="WA">Feb</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                      <p>Distinct</p>
+                        <div class="col-md-10 col-sm-12 col-xs-12">
+                          <select class="form-control">
+                            <option>天河区</option>
+                            <option>番禺区</option>
+                            <option>海珠区</option>
+                            <option>花都区</option>
+                            <option>黄埔区</option>
+                            <option>荔湾区</option>
+                            <option>白云区</option>
+                            <option>越秀区</option>
+                            <option>增城区</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                      <p>Average Price</p>
+                      <input class="knob" data-width="110" data-height="120" data-displayPrevious=true data-fgColor="#26B99A" data-skin="tron" data-thickness=".2" value="75">
+                    </div>
+                    <div class="col-md-2">
+                      <p>Number of Reviews</p>
+                      <input class="knob" data-width="100" data-height="120" data-angleOffset=90 data-linecap=round data-fgColor="#26B99A" value="354">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+    		<!-- reference table -->
+              <div class="col-md-12">
+	    		<!-- reference table -->
+	              <div class="col-md-8 col-sm-6 col-xs-12">
+	                <div class="x_panel">
+	                  <div class="x_title">
+	                    <h2>Similar Merchant Historical Data </h2>
+	                    <ul class="nav navbar-right panel_toolbox">
+	                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+	                      </li>
+	                      <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+	                        <ul class="dropdown-menu" role="menu">
+	                          <li><a href="#">Settings 1</a>
+	                          </li>
+	                          <li><a href="#">Settings 2</a>
+	                          </li>
+	                        </ul>
+	                      </li>
+	                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+	                      </li>
+	                    </ul>
+	                    <div class="clearfix"></div>
+	                  </div>
+	                  <div class="x_content">
+	                    <table id="datatable" class="table table-striped table-bordered dt-responsive nowrap">
+                        <div id="datatable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class="form-control input-sm"><option value="5">5</option><option value="10">10</option><option value="50">50</option><option value="15">15</option></select> entries</label></div></div><div class="col-sm-6"><div id="datatable_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="datatable"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="datatable" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
+	                      <thead>
+	                        <tr>
+	                          <th>Merchants</th>
+	                          <th>Distinct</th>
+	                          <th>3rd Channel</th>
+	                          <th>Date</th>
+	                          <th>Average Price</th>
+                            <th>Price</th>
+	                        </tr>
+	                      </thead>
+
+	                      <tbody>
+	                        <tr>
+                            <td>歌芸PTV</td>
+                            <td>天河区</td>
+                            <td>KTV</td>
+                            <td>2019-05-08</td>
+                            <td>55.0</td>
+                            <td>¥35.7</th>
+	                        </tr>
+	                        <tr>
+                            <td>金座量贩式KTV</td>
+                            <td>天河区</td>
+                            <td>KTV</td>
+                            <td>2019-04-25</td>
+                            <td>54.0</td>
+                            <td>¥40.0</th>
+	                        </tr>
+	                        <tr>
+                            <td>活力无限KTV</td>
+                            <td>天河区</td>
+                            <td>KTV</td>
+                            <td>2019-05-30</td>
+                            <td>40.0</td>
+                            <td>¥35.7</th>
+	                        </tr>
+	                        <tr>
+                            <td>Play Club 清吧KTV棋牌</td>
+                            <td>天河区</td>
+                            <td>KTV</td>
+                            <td>2019-05-07</td>
+                            <td>63.8</td>
+                            <td>¥34.8</th>
+	                        </tr>
+	                        <tr>
+                            <td>PLAY MIX</td>
+                            <td>天河区</td>
+                            <td>KTV</td>
+                            <td>2019-05-07</td>
+                            <td>70.0</td>
+                            <td>¥34.8</th>
+	                        </tr>    
+	                      </tbody>
+	                    </table>
+                                           <div class="row">
+                                <div class="col-sm-5">
+                                  <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 5 of 57 entries
+                                  </div>
+                                </div>
+                                            <div class="col-sm-7">
+                                              <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
+                                                <ul class="pagination">
+                                                  <li class="paginate_button previous disabled" id="datatable_previous">
+                                                    <a href="https://colorlib.com/polygon/gentelella/tables_dynamic.html#" aria-controls="datatable" data-dt-idx="0" tabindex="0">Previous
+                                                    </a></li><li class="paginate_button active"><a href="file:///Users/haikundu/Desktop/bootstrap/gentelella/production/Carlsberg_demoV2.html#" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="file:///Users/haikundu/Desktop/bootstrap/gentelella/production/Carlsberg_demoV2.html#" aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="file:///Users/haikundu/Desktop/bootstrap/gentelella/production/Carlsberg_demoV2.html#" aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="file:///Users/haikundu/Desktop/bootstrap/gentelella/production/Carlsberg_demoV2.html#" aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="file:///Users/haikundu/Desktop/bootstrap/gentelella/production/Carlsberg_demoV2.html#" aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button next" id="datatable_next"><a href="file:///Users/haikundu/Desktop/bootstrap/gentelella/production/Carlsberg_demoV2.html#" aria-controls="datatable" data-dt-idx="7" tabindex="0">Next</a>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+	                  </div>
+	                </div>
+	              </div>
+
+			<!-- historical data tracking single store -->
+
+	              <div class="col-md-4 col-sm-6 col-xs-12">
+	                <div class="x_panel">
+	                  <div class="x_title">
+	                    <h2>Historical Price Tracking</h2>
+	                    <ul class="nav navbar-right panel_toolbox">
+	                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+	                      </li>
+	                      <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+	                        <ul class="dropdown-menu" role="menu">
+	                          <li><a href="#">Settings 1</a>
+	                          </li>
+	                          <li><a href="#">Settings 2</a>
+	                          </li>
+	                        </ul>
+	                      </li>
+	                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+	                      </li>
+	                    </ul>
+	                    <div class="clearfix"></div>
+	                  </div>
+	                  <div class="x_content">
+
+	                    <div id="echart_line" style="height:350px;"></div>
+
+	                  </div>
+	                </div>
+	              </div>
+
+              </div>
+
+	<!-- Price Distribution for all channels (Same Month) -->
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Price Distribution for all channels (Same Month)</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <div id="mainb" style="height:350px;"></div>
+
+                  </div>
+                </div>
+              </div>
+
+	<!-- Price Distribution for all region (Same Region) -->
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Price Distribution for all region (Same Channel)</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <div id="mainbb" style="height:350px;"> </div>
+
+                  </div>
+                </div>
+              </div>
+
+	<!-- Price Distribution for all month (Same Channel) -->
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Price Distribution for all month</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <div id="mainbbb" style="height:350px;"></div>
+
+                  </div>
+                </div>
+              </div>		
+        <!-- /page content -->
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            2019 Cardional Operations. All Rights Resserved.
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../vendors/Flot/jquery.flot.js"></script>
+    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- ECharts -->
+    <script src="../vendors/echarts/dist/echarts.min.js"></script>
+    <script src="../vendors/echarts/map/js/world.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.js"></script>
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../vendors/jquery/dist/jquery.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+
+	<script src="../vendors/bootstrap/dist/js/bootstrap.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+
+	<script src="../vendors/fastclick/lib/fastclick.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+
+	<script src="../vendors/nprogress/nprogress.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+
+	<script src="../vendors/iCheck/icheck.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+
+	<script src="../vendors/datatables.net/js/jquery.dataTables.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/datatables.net-buttons/js/buttons.print.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/jszip/dist/jszip.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/pdfmake/build/pdfmake.min.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+	<script src="../vendors/pdfmake/build/vfs_fonts.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+
+	<script src="../build/js/custom.js" type="0bbe42bce9622446011d5df1-text/javascript"></script>
+
+	<script type="0bbe42bce9622446011d5df1-text/javascript">
+</script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="0bbe42bce9622446011d5df1-|49" defer="">
+</script>
+</body>
+</html>

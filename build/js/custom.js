@@ -2956,14 +2956,14 @@ if (typeof NProgress != 'undefined') {
 
 				  echartBar.setOption({
 					title: {
-					  text: 'Graph title',
-					  subtext: 'Graph Sub-text'
+					  text: 'Price Distribution',
+					  subtext: 'For Channel'
 					},
 					tooltip: {
 					  trigger: 'axis'
 					},
 					legend: {
-					  data: ['sales', 'purchases']
+					  data: ['Entertainment']
 					},
 					toolbox: {
 					  show: false
@@ -2971,60 +2971,159 @@ if (typeof NProgress != 'undefined') {
 					calculable: false,
 					xAxis: [{
 					  type: 'category',
-					  data: ['1?', '2?', '3?', '4?', '5?', '6?', '7?', '8?', '9?', '10?', '11?', '12?']
+					  axisLabel:{
+					  	interval: 0
+					  },
+					  data: ['KTV', '慢摇吧', '普通酒吧', '普通夜总会', '中高档酒吧', '中高档夜总会']
 					}],
 					yAxis: [{
-					  type: 'value'
+					  type: 'value',
+					  min: 25
 					}],
 					series: [{
-					  name: 'sales',
+					  name: 'Entertainment',
 					  type: 'bar',
-					  data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+					  data: [32.2, 37.2, 30.4, 35.0, 34.4, 33.7],
+					  itemStyle:{
+					  	normal:{
+					  		color: '#73879C'
+					  	}
+					  },
 					  markPoint: {
 						data: [{
-						  type: 'max',
-						  name: '???'
-						}, {
-						  type: 'min',
-						  name: '???'
+						  name: 'Entertainment',
+						  value: 32.2,
+						  xAxis: 0,
+						  yAxis: 32.2,
 						}]
 					  },
 					  markLine: {
 						data: [{
 						  type: 'average',
-						  name: '???'
-						}]
-					  }
-					}, {
-					  name: 'purchases',
-					  type: 'bar',
-					  data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
-					  markPoint: {
-						data: [{
-						  name: 'sales',
-						  value: 182.2,
-						  xAxis: 7,
-						  yAxis: 183,
-						}, {
-						  name: 'purchases',
-						  value: 2.3,
-						  xAxis: 11,
-						  yAxis: 3
-						}]
-					  },
-					  markLine: {
-						data: [{
-						  type: 'average',
-						  name: '???'
+						  name: 'average price'
 						}]
 					  }
 					}]
 				  });
 
 			}
+
+			if ($('#mainbb').length ){
 			  
+				  var echartBar = echarts.init(document.getElementById('mainbb'), theme);
+
+				  echartBar.setOption({
+					title: {
+					  text: 'Price Distribution',
+					  subtext: 'For Region'
+					},
+					tooltip: {
+					  trigger: 'axis'
+					},
+					legend: {
+					  data: ['KTV']
+					},
+					toolbox: {
+					  show: false
+					},
+					calculable: false,
+					xAxis: [{
+					  type: 'category',
+					  axisLabel:{
+					  	interval: 0
+					  },
+					  data: ['白云区', '从化区', '番禺区', '海珠区', '花都区', '黄埔区', '荔湾区', '天河区', '越秀区', '增城区']
+					}],
+					yAxis: [{
+					  type: 'value',
+					  min: 20
+					}],
+					series: [{
+					  name: 'KTV',
+					  type: 'bar',
+					  data: [32.2,30.7,35.8,35.6,33.0,25.7,27.0,35.1,36.8,36.2],
+					  itemStyle:{
+					  	normal:{
+					  		color: '#73879C'
+					  	}
+					  },
+					  markPoint: {
+						data: [{
+						  name: 'price',
+						  value: 35.1,
+						  xAxis: 7,
+						  yAxis: 35.1,
+						}]
+					  },
+					  markLine: {
+						data: [{
+						  type: 'average',
+						  name: 'average_price'
+						}]
+					  }
+					}]
+				  });
+
+			}
+
+			if ($('#mainbbb').length ){
 			  
-			  
+				  var echartBar = echarts.init(document.getElementById('mainbbb'), theme);
+
+				  echartBar.setOption({
+					title: {
+					  text: 'Price Distribution',
+					  subtext: 'For Month'
+					},
+					tooltip: {
+					  trigger: 'axis'
+					},
+					legend: {
+					  data: ['天河区 KTV']
+					},
+					toolbox: {
+					  show: false
+					},
+					calculable: false,
+					xAxis: [{
+					  type: 'category',
+					  axisLabel:{
+					  	interval: 0
+					  },
+					  data: ['Jan', 'Feb', 'Mar', 'Apr', 'May','Oct', 'Dec']
+					}],
+					yAxis: [{
+					  type: 'value',
+					  min: 20
+					}],
+					series: [{
+					  name: '天河区 KTV',
+					  type: 'bar',
+					  data: [32.7,33.3,34.5,35.3,35.1,25.7,39.0],
+					  itemStyle:{
+					  	normal:{
+					  		color: '#73879C'
+					  	}
+					  },
+					  markPoint: {
+						data: [{
+						  name: 'price',
+						  value: 35.3,
+						  xAxis: 4,
+						  yAxis: 35.3,
+						}]
+					  },
+					  markLine: {
+						data: [{
+						  type: 'average',
+						  name: 'average_price'
+						}]
+					  }
+					}]
+				  });
+
+			}
+
 			  
 			   //echart Radar
 			  
@@ -3284,8 +3383,7 @@ if (typeof NProgress != 'undefined') {
 
 			  echartLine.setOption({
 				title: {
-				  text: 'Line Graph',
-				  subtext: 'Subtitle'
+				  text: 'Historical Price Trend'
 				},
 				tooltip: {
 				  trigger: 'axis'
@@ -3293,7 +3391,7 @@ if (typeof NProgress != 'undefined') {
 				legend: {
 				  x: 220,
 				  y: 40,
-				  data: ['Intent', 'Pre-order', 'Deal']
+				  data: ['歌芸PTV', '金座量贩式KTV', '活力无限KTV']
 				},
 				toolbox: {
 				  show: true,
@@ -3322,47 +3420,49 @@ if (typeof NProgress != 'undefined') {
 				xAxis: [{
 				  type: 'category',
 				  boundaryGap: false,
-				  data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+				  data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jul', 'July']
 				}],
 				yAxis: [{
-				  type: 'value'
+				  type: 'value',
+				  min: 30,
+				  max: 42
 				}],
 				series: [{
-				  name: 'Deal',
+				  name: '歌芸PTV',
 				  type: 'line',
 				  smooth: true,
-				  itemStyle: {
-					normal: {
-					  areaStyle: {
-						type: 'default'
-					  }
-					}
-				  },
-				  data: [10, 12, 21, 54, 260, 830, 710]
+				 // itemStyle: {
+					// normal: {
+					//   areaStyle: {
+					// 	type: 'default'
+					//   }
+					// }
+				 //  },
+				  data: [33.2, 34.0, 34.0, 37.2, 37.5, 39.0, 35.7]
 				}, {
-				  name: 'Pre-order',
+				  name: '金座量贩式KTV',
 				  type: 'line',
 				  smooth: true,
-				  itemStyle: {
-					normal: {
-					  areaStyle: {
-						type: 'default'
-					  }
-					}
-				  },
-				  data: [30, 182, 434, 791, 390, 30, 10]
+				 //  itemStyle: {
+					// normal: {
+					//   areaStyle: {
+					// 	type: 'default'
+					//   }
+					// }
+				 //  },
+				  data: [40.0, 36.0, 35.0, 36.2, 38.5, 40.0, 40.0]
 				}, {
-				  name: 'Intent',
+				  name: '活力无限KTV',
 				  type: 'line',
 				  smooth: true,
-				  itemStyle: {
-					normal: {
-					  areaStyle: {
-						type: 'default'
-					  }
-					}
-				  },
-				  data: [1320, 1132, 601, 234, 120, 90, 20]
+				 //  itemStyle: {
+					// normal: {
+					//   areaStyle: {
+					// 	type: 'default'
+					//   }
+					// }
+				 //  },
+				  data: [39.2, 35.0, 36.0, 32.2, 31.5, 33.0, 35.7]
 				}]
 			  });
 
